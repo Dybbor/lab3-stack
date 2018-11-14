@@ -34,7 +34,7 @@ TStack <T>::TStack(const TStack <T> &tmp )
 {
 	MaxSize = tmp.MaxSize;
 	Size = tmp.Size;
-	stack = new T[MaxSize];
+	Stack = new T[MaxSize];
 	for (int i = 0; i < Size; i++)
 		Stack[i] = tmp.Stack[i];
 }
