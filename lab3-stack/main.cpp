@@ -22,7 +22,7 @@ bool Check(string str)
 }
 void main()
 {
-	string str = "He(((llo)wor)ld)";
+	string str = "He(((llo)wor)ld))";
 	cout << Check(str) << endl;
 	system("pause");
 }

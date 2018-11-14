@@ -22,7 +22,7 @@ public:
 template <class T>
 TStack <T>::TStack(const int MS)
 {
-	if (MaxSize < 0)
+	if (MS < 0)
 		throw - 1;
 	MaxSize = MS;
 	Stack = new T[MaxSize];
