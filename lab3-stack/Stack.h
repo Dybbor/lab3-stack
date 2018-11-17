@@ -10,6 +10,8 @@ public:
 	TStack(const TStack <T> &tmp);
 	~TStack();
 	TStack& operator= (const TStack &tmp);
+//	bool operator ==(const TStack &tmp);
+//	bool operator !=(const TStack &tmp);
 	void Push(const int elem);
 	T Pop();
 	T Top() const;
@@ -60,7 +62,18 @@ TStack <T> &TStack <T> ::operator= (const TStack &tmp)
 	return *this;
 }
 
+/*template <class T>
+bool TStack <T> ::operator==(const TStack <T> &tmp) 
+{
+	if (Size!=tmp.)
 
+}
+
+template <class T>
+bool TStack <T> ::operator!=(const TStack <T> &tmp)
+{
+
+}*/
 template <class T>
 void TStack<T> ::Push(const int elem) 
 {
@@ -91,7 +104,7 @@ T TStack<T>::Top() const
 	if (Size == 0)
 		throw "Stack is empty";
 	else 
-		return stack[size - 1];
+		return Stack[Size - 1];
 }
 
 template <class T>
