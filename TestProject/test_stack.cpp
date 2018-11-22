@@ -46,5 +46,31 @@ TEST (TStack, cant_pop_elem)
 		TStack <int> s(0);
 		ASSERT_ANY_THROW(s.Pop());
 }
+TEST (TStack, can_top_elem)
+{
+	TStack <int> s(3);
+	for (int i = 0; i<3; i++)
+		s.Push(i);
+	EXPECT_EQ(2, s.Pop());
+}
+TEST(TStack, cant_top_elem) 
+{
+	TStack <int> s(3);
+	ASSERT_ANY_THROW(s.Top());
+}
+TEST(TStack, stack_is_empty_return_true) 
+{
+	TStack <int> s(3);
+	EXPECT_EQ(1, s.IsEmpty());
+}
+
+TEST(TStack, stack_is_full_return_true)
+{
+	TStack <int> s(3);
+	for (int i = 0; i<3; i++)
+		s.Push(i);
+	EXPECT_EQ(1, s.IsFull());
+}
+
 
 
