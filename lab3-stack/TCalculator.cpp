@@ -38,11 +38,11 @@ void TCalculator::ToPostfix()
 	{
 		if (tmp[i] == '(')
 			StackOperation.Push(tmp[i]);
-		if (tmp[i] >= '0'&& tmp[i] <= 9)
+		if (tmp[i] >= '0'&& tmp[i] <= '9')
 			postfix += tmp[i];
 		if (tmp[i] == ')')
 		{
-			while (StackOperation.Top() == '(')
+			while (StackOperation.Top() != '(')
 				postfix += StackOperation.Pop();
 			StackOperation.Pop();
 		}
@@ -57,5 +57,23 @@ void TCalculator::ToPostfix()
 			StackOperation.Push(tmp[i]);
 		}
 	}
+}
+void TCalculator::SetInfix() 
+{
+	char c;
+	while (1) 
+	{
+		c = getchar();
+		if (c == '\n')
+			break;
+		else
+			infix += c;
+	}
+	
+}
+string TCalculator::GetPostfix() 
+{
+	this->ToPostfix();
+	return postfix;
 }
 

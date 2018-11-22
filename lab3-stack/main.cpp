@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Stack.h"
+#include "TCalculator.h"
 using namespace std;
 bool Check(string str) 
 {
@@ -24,6 +25,9 @@ void main()
 {
 	string str = "He(((llo)wor)ld))";
 	cout << Check(str) << endl;
+	TCalculator tcal;
+	tcal.SetInfix();
+	cout<<tcal.GetPostfix();
 	system("pause");
 }
 

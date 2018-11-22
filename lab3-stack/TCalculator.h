@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <string>
 #include "Stack.h"
 
@@ -13,6 +14,8 @@ private:
 	int Priority(const char m) const;
 	void ToPostfix();
 public:
+	void SetInfix();
+	string GetPostfix();
 	TCalculator();
 	~TCalculator();
 };
