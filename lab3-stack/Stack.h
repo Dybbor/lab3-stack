@@ -15,6 +15,7 @@ public:
 	void Push(const int elem);
 	T Pop();
 	T Top() const;
+	void Clear();
 	bool IsEmpty() const;
 	bool IsFull() const;
 
@@ -107,6 +108,12 @@ T TStack<T>::Top() const
 		return Stack[Size - 1];
 }
 
+template <class T>
+void TStack <T>::Clear() 
+{
+	while (!(this->IsEmpty()))
+		this->Pop();
+}
 template <class T>
 bool TStack <T>::IsEmpty() const 
 {
