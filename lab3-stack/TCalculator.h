@@ -12,10 +12,11 @@ private:
 	TStack <char> StackOperation;
 	TStack <double> StackNumber;
 	int Priority(const char m) const;
-	void ToPostfix();
 public:
+	void ToPostfix();
 	void SetInfix();
 	string GetPostfix();
+	double Calculator();
 	TCalculator();
 	~TCalculator();
 };

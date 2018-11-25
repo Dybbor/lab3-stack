@@ -26,8 +26,16 @@ void main()
 	string str = "He(((llo)wor)ld))";
 	cout << Check(str) << endl;
 	TCalculator tcal;
-	tcal.SetInfix();
-	cout<<tcal.GetPostfix();
+
+	//while (1)
+	{
+		tcal.SetInfix();
+		cout << tcal.GetPostfix() << endl;;
+		cout << tcal.Calculator() << endl;
+		system("pause");
+		system("cls");
+	}
+
 	system("pause");
 }
 
