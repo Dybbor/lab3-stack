@@ -111,8 +111,7 @@ T TStack<T>::Top() const
 template <class T>
 void TStack <T>::Clear() 
 {
-	while (!(this->IsEmpty()))
-		this->Pop();
+	Size=0;
 }
 template <class T>
 bool TStack <T>::IsEmpty() const 

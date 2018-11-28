@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "Stack.h"
+#include "..\..\lab3-stack\Stack.h"
 
 using namespace std;
 
@@ -14,7 +14,7 @@ private:
 	int Priority(const char m) const;
 public:
 	void ToPostfix();
-	void SetInfix();
+	void SetInfix(string _infix);
 	string GetPostfix();
 	double Calculator();
 	TCalculator();

@@ -52,15 +52,15 @@ void TCalculator::ToPostfix()
 			while (Priority(tmp[i]) <= Priority(StackOperation.Top()))
 			{
 				postfix += StackOperation.Pop();
-				//StackOperation.Push(tmp[i]); ///////////////////////////////////////////
 			}
 			StackOperation.Push(tmp[i]);
 		}
 	}
 }
-void TCalculator::SetInfix() 
+void TCalculator::SetInfix(string  _infix) 
 {
-	infix.clear();
+	infix=_infix;
+	/*infix.clear();
 	char c;
 	while (1) 
 	{
@@ -69,12 +69,10 @@ void TCalculator::SetInfix()
 			break;
 		else
 			infix += c;
-	}
-	
+	}*/
 }
 string TCalculator::GetPostfix() 
 {
-	this->ToPostfix();
 	return postfix;
 }
 
@@ -120,5 +118,8 @@ double TCalculator::Calculator()
 		}
 	}
 	tmp = StackNumber.Pop();
-	return tmp;
+	if (StackNumber.IsEmpty())
+		return tmp;
+	else
+		throw "Error";
 }
