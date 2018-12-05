@@ -1,0 +1,6 @@
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 Graphics^ gr=CreateGraphics();
+				 gr->DrawLine(Pens::Aquamarine,10,10,100,100);
+				 gr->DrawArc(Pens::Black,100,100,100,100,0,30);//  первая точка отсчета, ширини, в градусах откуда и до куда
+			 }
