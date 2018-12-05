@@ -1,18 +1,18 @@
-#pragma once
+п»ї#pragma once
 template <class T>
-class TStack 
+class TStack
 {
-	int MaxSize; // Максимальный размер стека
-	int Size;    // Число элементов стека
-	T *Stack;    // Массив стека
+	int MaxSize; // ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г»Г© Г°Г Г§Г¬ГҐГ° Г±ГІГҐГЄГ 
+	int Size;    // Г—ГЁГ±Г«Г® ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г±ГІГҐГЄГ 
+	T *Stack;    // ГЊГ Г±Г±ГЁГў Г±ГІГҐГЄГ 
 public:
 	TStack(const int  MS = 10);
 	TStack(const TStack <T> &tmp);
 	~TStack();
 	TStack& operator= (const TStack &tmp);
-//	bool operator ==(const TStack &tmp);
-//	bool operator !=(const TStack &tmp);
-	void Push(const int elem);
+	//	bool operator ==(const TStack &tmp);
+	//	bool operator !=(const TStack &tmp);
+	void Push(const T elem);
 	T Pop();
 	T Top() const;
 	void Clear();
@@ -33,7 +33,7 @@ TStack <T>::TStack(const int MS)
 }
 
 template <class T>
-TStack <T>::TStack(const TStack <T> &tmp ) 
+TStack <T>::TStack(const TStack <T> &tmp)
 {
 	MaxSize = tmp.MaxSize;
 	Size = tmp.Size;
@@ -43,13 +43,13 @@ TStack <T>::TStack(const TStack <T> &tmp )
 }
 
 template <class T>
-TStack <T> ::~TStack() 
+TStack <T> ::~TStack()
 {
 	delete[] Stack;
 }
 
 template <class T>
-TStack <T> &TStack <T> ::operator= (const TStack &tmp) 
+TStack <T> &TStack <T> ::operator= (const TStack &tmp)
 {
 	if (MaxSize != tmp.MaxSize)
 	{
@@ -64,19 +64,16 @@ TStack <T> &TStack <T> ::operator= (const TStack &tmp)
 }
 
 /*template <class T>
-bool TStack <T> ::operator==(const TStack <T> &tmp) 
+bool TStack <T> ::operator==(const TStack <T> &tmp)
 {
-	if (Size!=tmp.)
-
+if (Size!=tmp.)
 }
-
 template <class T>
 bool TStack <T> ::operator!=(const TStack <T> &tmp)
 {
-
 }*/
 template <class T>
-void TStack<T> ::Push(const int elem) 
+void TStack<T> ::Push(const T elem)
 {
 	if (MaxSize == Size)
 		throw "Stack is full";
@@ -88,7 +85,7 @@ void TStack<T> ::Push(const int elem)
 }
 
 template <class T>
-T TStack <T>::Pop() 
+T TStack <T>::Pop()
 {
 	if (Size == 0)
 		throw "Stack is empty";
@@ -104,17 +101,17 @@ T TStack<T>::Top() const
 {
 	if (Size == 0)
 		throw "Stack is empty";
-	else 
+	else
 		return Stack[Size - 1];
 }
 
 template <class T>
-void TStack <T>::Clear() 
+void TStack <T>::Clear()
 {
-	Size=0;
+	Size = 0;
 }
 template <class T>
-bool TStack <T>::IsEmpty() const 
+bool TStack <T>::IsEmpty() const
 {
 	return (Size == 0);
 }

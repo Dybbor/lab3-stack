@@ -8,6 +8,6 @@ using namespace System::Windows::Forms;
 void Main(array<String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Project3::MyForm form;
+	Calculator::MyForm form;
 	Application::Run(%form);
 }

@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Stack.h"
-#include "TCalculator.h"
+#include "..\CLR_12\Project3\TCalculator.h"
 using namespace std;
 bool Check(string str) 
 {
