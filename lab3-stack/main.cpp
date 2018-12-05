@@ -23,15 +23,26 @@ bool Check(string str)
 }
 void main()
 {
+	setlocale(LC_ALL, "Russian");
 	string str = "He(((llo)wor)ld))";
 	cout << Check(str) << endl;
 	TCalculator tcal;
-
-	//while (1)
+	while (1)
 	{
-		tcal.SetInfix();
-		cout << tcal.GetPostfix() << endl;;
-		cout << tcal.Calculator() << endl;
+		try {
+			tcal.SetInfix();
+			if (tcal.CheckBrackets() == 0)
+				throw 0;
+			if (tcal.CheckOperator() == 0)
+				throw 0;
+			tcal.ToPostfix();
+			cout << tcal.GetPostfix() << endl;;
+			cout <<"Ответ: "<< tcal.Calculator() << endl;
+		}
+		catch (int k) 
+		{
+			cout << "Неправильно введены данные" << endl;
+		}
 		system("pause");
 		system("cls");
 	}
